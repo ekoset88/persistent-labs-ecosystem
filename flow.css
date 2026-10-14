@@ -157,3 +157,27 @@
  .stack-heading{margin-bottom:4px}
  .ecosystem{--flow-gap:12px;--frame-pad:8px}
 }
+
+/* The optional Unfazed identity shares FireFlow's logo and wordmark alignment. */
+.fireflow-layer{--brand-offset:33px;--brand-size:28px;--brand-gap:10px;--card-inline:16px}
+.fireflow-layer .stack-block{padding-left:var(--card-inline);padding-right:var(--card-inline)}
+.fireflow-layer .block-brand,.fireflow-layer .alternative-brand{gap:var(--brand-gap)}
+.fireflow-layer .block-brand .mark,.fireflow-layer .alternative-brand .mark{width:var(--brand-size);height:var(--brand-size)}
+.orchestration-alternative{position:relative;border-left-width:3px;padding-left:calc(var(--card-inline) + var(--brand-offset));padding-right:var(--card-inline)}
+.alternative-or{position:absolute;left:var(--card-inline);width:20px}
+.alternative-or-inline{display:none;font-family:var(--mono);font-size:.85em;color:var(--muted)}
+.orchestration-alternative .alternative-brand .mark,.orchestration-alternative .alternative-brand .mark path{fill:none}
+.orchestration-alternative .alternative-brand .mark path{stroke:var(--accent);stroke-width:1.25px;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+@media(max-width:1180px){
+ .fireflow-layer{--brand-offset:0px;--brand-size:23px;--brand-gap:7px;--card-inline:12px}
+ .alternative-or{display:none}.alternative-or-inline{display:inline}
+}
+@media(max-width:760px){.fireflow-layer{--brand-size:22px;--card-inline:9px}}
+@media(max-width:360px){.fireflow-layer{--brand-size:20px;--brand-gap:6px;--card-inline:8px}}
+/* One prominent, accessible website link across all product and partner pages. */
+.product-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;min-height:52px;min-width:180px;max-width:100%;margin-top:24px;padding:13px 22px;border:1px solid var(--ink);border-radius:6px;background:var(--ink);color:var(--white);font:650 16px/1.4 var(--display);text-decoration:none;transition:background .15s}
+.product-cta .ui-icon{width:20px;height:20px}
+.product-cta:hover{background:#34383e}
+.product-cta:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.gal-hero .product-cta{margin-top:30px}
+@media(max-width:760px){.product-cta{display:flex;width:100%;font-size:15px}.gal-hero .product-cta{margin-top:22px}}
