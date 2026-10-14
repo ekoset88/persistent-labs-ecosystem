@@ -53,8 +53,8 @@
       const included = layers.includes(card.dataset.layer);
       card.classList.toggle('is-selected', included);
       card.classList.toggle('is-unselected', !included);
-      card.querySelector('.selection-label').textContent = included ? (mode === 'journey' ? 'This step' : 'Included') : 'Not in this example';
-      const state = mode === 'full' ? '' : included ? (mode === 'journey' ? '. Current journey step.' : '. Included in this example.') : '. Not in this example.';
+      card.querySelector('.selection-label').textContent = included ? (mode === 'journey' ? 'This step' : 'Included') : (mode === 'journey' ? 'Another step' : 'Not in this example');
+      const state = mode === 'full' ? '' : included ? (mode === 'journey' ? '. Current journey step.' : '. Included in this example.') : (mode === 'journey' ? '. Another journey step.' : '. Not in this example.');
       card.setAttribute('aria-label', card.dataset.baseLabel + state);
     });
     document.querySelector('.ecosystem').dataset.mode = mode;
