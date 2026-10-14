@@ -181,3 +181,7 @@
 .product-cta:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .gal-hero .product-cta{margin-top:30px}
 @media(max-width:760px){.product-cta{display:flex;width:100%;font-size:15px}.gal-hero .product-cta{margin-top:22px}}
+
+/* Both orchestration options stay accessible from the journey. */
+.journey-links{display:flex;flex-direction:column;align-items:flex-start;flex-shrink:0}
+.journey-step small{line-height:1.4}

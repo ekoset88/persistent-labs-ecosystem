@@ -76,7 +76,13 @@
     detail.querySelector('.journey-copy').textContent = item.copy;
     const link = detail.querySelector('.journey-link');
     link.href = `${item.id}.html`;
-    link.querySelector('.journey-link-label').textContent = `Explore ${name}`;
+    link.querySelector('.journey-link-label').textContent = `Explore ${item.linkLabel || name}`;
+    const alternative = detail.querySelector('.journey-alternative-link');
+    alternative.hidden = !item.alternative;
+    if (item.alternative) {
+      alternative.href = `${item.alternative.id}.html`;
+      alternative.querySelector('.journey-link-label').textContent = `Explore ${item.alternative.name}`;
+    }
     prev.disabled = step === 0;
     next.disabled = step === content.journey.length - 1;
     next.querySelector('.journey-next-label').textContent = step === content.journey.length - 1 ? 'Journey complete' : 'Next step';
